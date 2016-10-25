@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cartoon</title>
+        <style type="text/css">
+         body, html {
+             margin: 0px;
+             height: 100%;
+             width: 100%;
+         }
+         #cartoon {
+             --sun-height: 600px;
+             --sun-floor: 100px;
+             position: absolute;
+             top: 0;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             margin: auto auto;
+             height: 800px;
+             width: 600px;
+         }
+
+         #cartoon img {
+             position: absolute;
+             top: 0;
+             left: 0;
+         }
+
+         #house_placeholder {
+             z-index: 1;
+         }
+
+         #interior_placeholder {
+             z-index: 2;
+         }
+
+         #exterior_placeholder {
+             z-index: 0;
+         }
+
+         #table_placeholder {
+             z-index: 3;
+         }
+        </style>
+    </head>
+
+    <body>
+        <svg id="wrapper" width="100%" height="100%" viewBox="0 0 800 600">
+            <foreignObject width="600" height="800">
+                <div id="cartoon">
+                    <svg id="house_path" width="600px" height="800px" viewBox="0 0 800 600">
+                        <path d="M607,691c-41.6,0.1-83.3,0.1-124.9,0.2c-61.3,0-122.6,0-183.9,0c-7.5,0-8.1-0.7-8.3-8.3c-0.6-20.8-1.1-41.6-2.1-62.3c-0.3-6.5-0.8-12.9-0.8-19.4c0-3.6,0.5-7.2-3.6-9.5c-2.5-1.4-1.5-4.6-1.5-7c0-49.8,0-99.6,0-149.4c0-7.9,0-8.1-7.8-7.9c-4.8,0.1-6.2-1.5-6.4-6.3c-0.3-8.3,3.3-14,9.4-19c20.9-17.2,41.7-34.6,62.6-52c8-6.7,16-13.5,24-20.3c1.7-1.5,3.2-2,5.4-1.1c14.1,6,28.2,11.9,42.3,17.8c23.3,9.8,46.7,19.6,70,29.3c16,6.7,31.4,14.6,46.7,22.6c17.3,9,34.8,17.5,52.2,26.3c8.9,4.5,17.8,9,26.8,13.5C607,522.3,607,606.7,607,691z">
+                        </path>
+                    </svg>
+                    <img id="clouds" width="440" height="54" src="clouds.png" />
+                    <img id="house_placeholder" width="600" height="800" src="placeholderHouse.png" />
+                    <img id="interior_placeholder" width="600" height="800" src="placeholderInterior.png" />
+                    <img id="exterior_placeholder" width="600" height="800" src="placeholderExterior.png" />
+                    <img id="table_placeholder" width="600" height="800" src="placeholderTable.png" />
+                </div>
+            </foreignObject>
+        </svg>
+    </body>
+
+</html>
